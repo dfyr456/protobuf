@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,KACE,0BACF,CAEA,SACE,oBACF","file":"main.5820f602.chunk.css","sourcesContent":["body {\n  padding-top: 20px !important;\n}\n\ntable td {\n  word-break: break-all;\n}"]}
