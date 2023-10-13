@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/protobuf/static/css/main.5820f602.chunk.css",
+    "main.js": "/protobuf/static/js/main.86afd43c.chunk.js",
+    "main.js.map": "/protobuf/static/js/main.86afd43c.chunk.js.map",
+    "runtime-main.js": "/protobuf/static/js/runtime-main.a57d9ed3.js",
+    "runtime-main.js.map": "/protobuf/static/js/runtime-main.a57d9ed3.js.map",
+    "static/css/2.24519175.chunk.css": "/protobuf/static/css/2.24519175.chunk.css",
+    "static/js/2.35634a9b.chunk.js": "/protobuf/static/js/2.35634a9b.chunk.js",
+    "static/js/2.35634a9b.chunk.js.map": "/protobuf/static/js/2.35634a9b.chunk.js.map",
+    "index.html": "/protobuf/index.html",
+    "precache-manifest.35786efe9a26ccd81fd0b736da41ffea.js": "/protobuf/precache-manifest.35786efe9a26ccd81fd0b736da41ffea.js",
+    "service-worker.js": "/protobuf/service-worker.js",
+    "static/css/2.24519175.chunk.css.map": "/protobuf/static/css/2.24519175.chunk.css.map",
+    "static/css/main.5820f602.chunk.css.map": "/protobuf/static/css/main.5820f602.chunk.css.map",
+    "static/media/semantic.min.css": "/protobuf/static/media/outline-icons.ef60a4f6.woff"
+  }
+}
