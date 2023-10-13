@@ -1,54 +1,31 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { Container, Divider, TextArea } from "semantic-ui-react";
-import { useLocation } from 'react-router-dom';
-import { parseInput, bufferToPrettyHex } from "./hexUtils";
+
+import { useLocation } from "react-router-dom";
+import { parseInput } from "./hexUtils";
 import "./App.css";
 import ProtobufDisplay from "./ProtobufDisplay";
 import { decodeProto } from "./protobufDecoder";
 
 function App() {
-  const [hex, setHex] = useState("");
   const [hexBuffer, setHexBuffer] = useState("");
   const location = useLocation();
-  const onHexChanged = e => {
-    setHex(e.target.value);
-  };
-
-  const onSubmit = () => {
-    const buffer = parseInput(hex);
-    setHex(bufferToPrettyHex(buffer));
-    setHexBuffer(buffer);
-  };
 
   useEffect(() => {
-    if (location.pathname !== '/') {
+    if (location.pathname !== "/") {
       const newHex = decodeURI(location.pathname.substr(1));
-      setHex(newHex);
 
       // Parsing and decoding
       const buffer = parseInput(newHex);
-      setHex(bufferToPrettyHex(buffer));
+
       setHexBuffer(buffer);
     }
   }, [location.pathname]);
 
-
   const result = hexBuffer ? (
-
-
-      <ProtobufDisplay value={decodeProto(hexBuffer)} />
-
+    <ProtobufDisplay value={decodeProto(hexBuffer)} />
   ) : null;
 
-  return (
-    <Fragment>
-
-
-
-      {result}
-
-    </Fragment>
-  );
+  return <Fragment>{result}</Fragment>;
 }
 
 export default App;

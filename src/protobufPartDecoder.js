@@ -1,6 +1,5 @@
 import JSBI from "jsbi";
 import { bufferLeToBeHex, bufferToPrettyHex } from "./hexUtils";
-import { interpretAsSignedType } from "./varintUtils";
 
 export function decodeFixed32(value) {
   const floatValue = value.readFloatLE(0);
@@ -21,7 +20,6 @@ export function decodeFixed32(value) {
 }
 
 export function decodeFixed64(value) {
-  const floatValue = value.readDoubleLE(0);
   const uintValue = JSBI.BigInt("0x" + bufferLeToBeHex(value));
   const intValue = twoComplements(uintValue);
 
@@ -29,18 +27,15 @@ export function decodeFixed64(value) {
 
   result.push({ type: "Int", value: intValue.toString() });
 
-
   return result;
 }
-
 
 // this is also related
 
 export function decodeVarintParts(value) {
   const result = [];
   const intVal = JSBI.BigInt(value);
-  result.push({  value: intVal.toString() });
-
+  result.push({ value: intVal.toString() });
 
   return result;
 }

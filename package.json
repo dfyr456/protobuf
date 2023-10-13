@@ -1,6 +1,7 @@
 {
   "name": "protobuf-decoder",
   "version": "0.1.0",
+  "homepage": "https://dfyr456.github.io/protobuf",
   "private": true,
   "dependencies": {
     "body-parser": "^1.20.2",
@@ -15,9 +16,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
-
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
